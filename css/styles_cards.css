@@ -11,10 +11,12 @@
    BODY
 =================================*/
 body {
-    background: linear-gradient(180deg, #d4edda 0%, #81c784 100%); /* gradiente verde profesional */
+    background: linear-gradient(180deg, #d4edda 0%, #81c784 100%);
+    /* gradiente verde profesional */
     font-family: Arial, sans-serif;
     text-align: center;
-    padding-top: 70px; /* espacio por menú fijo */
+    padding-top: 70px;
+    /* espacio por menú fijo */
 }
 
 /* ===============================
@@ -31,7 +33,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 5px 30px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .logo-contenedor {
@@ -64,7 +66,7 @@ ol.menu {
 }
 
 li a {
-    
+
     text-decoration: none;
     color: #faf7f7;
     font-weight: 600;
@@ -92,10 +94,17 @@ li a:focus {
         gap: 20px;
         padding: 20px;
         display: none;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
-    ol.menu.activo { display: flex; }
-    .menu-icon { display: block; }
+
+    ol.menu.activo {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
     .titulo-nav {
         font-size: 14px;
         max-width: 170px;
@@ -106,7 +115,8 @@ li a:focus {
 /* ===============================
    CONTENEDOR GENERAL
 =================================*/
-.contenedor-oferta, .oferta {
+.contenedor-oferta,
+.oferta {
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
@@ -116,7 +126,8 @@ li a:focus {
 h2 {
     font-family: 'Playfair Display', serif;
     font-size: 36px;
-    color: #2c5f2d; /* verde oscuro */
+    color: #2c5f2d;
+    /* verde oscuro */
     font-weight: 800;
     margin-bottom: 35px;
     text-align: center;
@@ -134,7 +145,9 @@ h3 {
     border-left: 5px solid #2c5f2d;
     padding-left: 12px;
 }
-.seccion h2, .seccion h3 {
+
+.seccion h2,
+.seccion h3 {
     position: relative;
     z-index: 1;
 }
@@ -142,15 +155,17 @@ h3 {
 h4.asignaturas-titulo {
     font-family: 'Playfair Display', serif;
     font-size: 20px;
-    color: #32401D; /* o el color que prefieras */
+    color: #32401D;
+    /* o el color que prefieras */
     text-align: left;
     padding-bottom: 6px;
     margin-bottom: 15px;
-    border-bottom: 2px solid #7CB425; /* línea verde profesional */
+    border-bottom: 2px solid #7CB425;
+    /* línea verde profesional */
 }
 
 p {
-    
+
     font-family: "Lora", serif;
     font-size: 17px;
     line-height: 1.7;
@@ -171,9 +186,10 @@ p {
 
 /* Cada semestre */
 .semestre {
-    background: #fff; /* fondo blanco de recuadro */
+    background: #fff;
+    /* fondo blanco de recuadro */
     border-radius: 8px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -181,12 +197,14 @@ p {
 
 /* Título del semestre */
 .semestre h4 {
-    background: #7CB425; /* verde profesional */
+    background: #7CB425;
+    /* verde profesional */
     color: #fff;
     font-size: 16px;
     margin: 0;
     padding: 8px 10px;
-    text-align: left; /* alineación a la izquierda */
+    text-align: left;
+    /* alineación a la izquierda */
     border-radius: 6px 6px 0 0;
 }
 
@@ -200,13 +218,15 @@ p {
 .semestre ul li {
     font-size: 14px;
     margin: 3px 0;
-    text-align: left; /* materias alineadas a la izquierda */
+    text-align: left;
+    /* materias alineadas a la izquierda */
 }
 
 /* ===============================
    BOTONES
 =================================*/
-.btn-mas, .btn-card {
+.btn-mas,
+.btn-card {
     display: inline-block;
     padding: 10px 22px;
     background: #2c5f2d;
@@ -216,7 +236,8 @@ p {
     transition: 0.3s ease;
 }
 
-.btn-mas:hover, .btn-card:hover {
+.btn-mas:hover,
+.btn-card:hover {
     background: #1d3f1b;
 }
 
@@ -236,7 +257,7 @@ body {
     background: linear-gradient(180deg, #d4edda 0%, #81c784 100%);
     font-family: 'Lora', serif;
     text-align: justify;
-    
+
     color: #333;
 }
 
@@ -254,7 +275,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 5px 30px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .logo-contenedor {
@@ -287,7 +308,7 @@ ol.menu {
 }
 
 li a {
-    
+
     text-decoration: none;
     color: #faf7f7;
     font-weight: 600;
@@ -315,10 +336,17 @@ li a:focus {
         gap: 20px;
         padding: 20px;
         display: none;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
-    ol.menu.activo { display: flex; }
-    .menu-icon { display: block; }
+
+    ol.menu.activo {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
     .titulo-nav {
         font-size: 14px;
         max-width: 170px;
@@ -367,15 +395,21 @@ p {
     line-height: 1.7;
     margin-bottom: 18px;
 }
+
 .historia {
-    width: 45%;              /* imagen más pequeña */
-    max-width: 350px;        /* tamaño máximo */
-    height: auto;            /* mantiene proporción */
+    width: 45%;
+    /* imagen más pequeña */
+    max-width: 350px;
+    /* tamaño máximo */
+    height: auto;
+    /* mantiene proporción */
     display: block;
-    margin: 20px auto;       /* centrada con espacio arriba y abajo */
+    margin: 20px auto;
+    /* centrada con espacio arriba y abajo */
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border: 2px solid #7CB425; /* borde verde profesional */
+    border: 2px solid #7CB425;
+    /* borde verde profesional */
 }
 
 /* Responsive para móviles */
@@ -403,22 +437,34 @@ footer {
     letter-spacing: 0.5px;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
+
 .link-reticula {
-    text-align: center; /* Centra el enlace dentro del div */
-    margin: 20px 0;    /* Espacio arriba y abajo */
+    text-align: center;
+    /* Centra el enlace dentro del div */
+    margin: 20px 0;
+    /* Espacio arriba y abajo */
 }
 
 .link-reticula a {
-    display: inline-block;           /* Permite padding y borde */
-    padding: 10px 20px;              /* Espacio interno */
-    background-color: #4CAF50;       /* Color de fondo */
-    color: white;                     /* Color del texto */
-    text-decoration: none;            /* Quita subrayado */
-    border-radius: 8px;               /* Bordes redondeados */
-    border: 2px solid #388E3C;       /* Borde visible */
-    font-weight: bold;                /* Texto más fuerte */
-    transition: background 0.3s;      /* Animación al pasar el mouse */
-    
+    display: inline-block;
+    /* Permite padding y borde */
+    padding: 10px 20px;
+    /* Espacio interno */
+    background-color: #4CAF50;
+    /* Color de fondo */
+    color: white;
+    /* Color del texto */
+    text-decoration: none;
+    /* Quita subrayado */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    border: 2px solid #388E3C;
+    /* Borde visible */
+    font-weight: bold;
+    /* Texto más fuerte */
+    transition: background 0.3s;
+    /* Animación al pasar el mouse */
+
     text-decoration: underline;
     text-underline-offset: 4px;
     text-decoration-thickness: 2px;
@@ -426,18 +472,22 @@ footer {
 }
 
 .link-reticula a:hover {
-    background-color: #388E3C;       /* Cambio de color al pasar el mouse */
+    background-color: #388E3C;
+    /* Cambio de color al pasar el mouse */
 }
+
 /* Navegación lateral fija */
 .side-nav {
     position: fixed;
     top: 50%;
-    left: 25px;             /* SEPARA LOS DOTS DEL TEXTO */
+    left: 25px;
+    /* SEPARA LOS DOTS DEL TEXTO */
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     gap: 12px;
-    z-index: 50;            /* YA NO TAPARÁ NADA */
+    z-index: 50;
+    /* YA NO TAPARÁ NADA */
 }
 
 
@@ -455,8 +505,9 @@ footer {
     background-color: #7f1f27;
     transform: scale(1.3);
 }
-.seccion {
-    scroll-margin-top: 80px; /* altura del navbar + 10px de margen */
-    
-}
 
+.seccion {
+    scroll-margin-top: 80px;
+    /* altura del navbar + 10px de margen */
+
+}

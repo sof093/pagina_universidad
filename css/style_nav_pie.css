@@ -12,7 +12,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 5px 30px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 /* Logo + título */
@@ -81,12 +81,16 @@ li a:focus {
         gap: 20px;
         padding: 20px;
         display: none;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
-    ol.menu.activo { display: flex; }
+    ol.menu.activo {
+        display: flex;
+    }
 
-    .menu-icon { display: block; }
+    .menu-icon {
+        display: block;
+    }
 
     .titulo-nav {
         font-size: 14px;
@@ -94,14 +98,16 @@ li a:focus {
         line-height: 1.2;
     }
 }
+
 /* ===============================
    FOOTER
 =================================*/
+
 footer {
     background-color: #7f1f27;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 30px 0 20px 0;
     width: 100%;
     font-weight: 500;
     letter-spacing: 0.5px;
@@ -112,29 +118,35 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* espacio entre enlaces */
-    flex-wrap: wrap; /* se adapta a móviles */
+    gap: 20px;
+    /* espacio entre enlaces */
+    flex-wrap: wrap;
+    /* se adapta a móviles */
 }
 
 .footer-contacto a {
-    
+
     color: #fff;
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 6px; /* espacio entre icono y texto */
+    gap: 6px;
+    /* espacio entre icono y texto */
     font-weight: 500;
 }
 
 .footer-contacto a:hover {
-    color: #7CB425; /* verde profesional al pasar el mouse */
+    color: #7CB425;
+    /* verde profesional al pasar el mouse */
 }
 
 .icono {
     width: 20px;
     height: 20px;
-    fill: currentColor; /* toma el color del link */
+    fill: currentColor;
+    /* toma el color del link */
 }
+
 /* ==== INFO EN FILA (Coordinador - Clave - Dirección) ==== */
 
 .footer-info {
@@ -142,7 +154,7 @@ footer {
     display: flex;
     justify-content: center;
     gap: 60px;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
 .info-item {
@@ -193,6 +205,3 @@ footer {
     color: #7CB425;
     text-decoration: underline;
 }
-
-
-

@@ -82,8 +82,8 @@ body {
 }
 
 /* Mostrar mensaje solo si el campo es inválido */
-.contacto-formulario input:invalid + .error-msg,
-.contacto-formulario textarea:invalid + .error-msg {
+.contacto-formulario input:invalid+.error-msg,
+.contacto-formulario textarea:invalid+.error-msg {
     display: block;
 }
 
@@ -126,11 +126,18 @@ body {
    ANIMACIÓN
 =================================*/
 @keyframes aparecer {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+
 .error-input {
     border-color: #ff4d4d !important;
     box-shadow: 0 0 6px rgba(255, 0, 0, 0.5);
 }
-

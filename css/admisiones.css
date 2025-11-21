@@ -127,26 +127,19 @@ h3 {
    4. SECCIONES Y TARJETAS
 ============================================================ */
 .seccion {
-    min-height: 100vh; /* Ocupa toda la altura de la ventana */
-    padding: 50px 20px; /* Ajusta según necesites */
-    box-sizing: border-box; /* Incluye padding en la altura */
+    min-height: 100vh;
+    padding: 50px 20px;
     position: relative;
     opacity: 0;
     transform: translateY(40px);
     transition: all 0.8s ease;
     padding-left: 80px;
-    scroll-margin-top: 80px; /* Para que no quede oculto tras el navbar */
+    scroll-margin-top: 80px;
 }
-
 
 /*fondo*/
-.seccion:nth-child(odd) { 
-    background: #e8f5e9;  /* verde claro */
-}
-.seccion:nth-child(even) { 
-    background: #B8E0B4;  /* verde conjugado */
-}
-
+.seccion:nth-child(odd) { background: #e8f5e9; }
+.seccion:nth-child(even) { background: #B8E0B4; }
 
 /* Separador en forma de onda */
 .seccion::after {
@@ -166,7 +159,6 @@ h3 {
     transform: translateY(0);
 }
 
-/* Tarjetas */
 .tarjetas-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -203,6 +195,7 @@ h3 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+
 /* Bordes de tarjetas por sección */
 .seccion:nth-child(1) .tarjeta img { border: 2px solid #7f1f27; }
 .seccion:nth-child(2) .tarjeta img { border: 2px solid #2c5f2d; }
@@ -220,6 +213,7 @@ h3 {
 }
 
 .tarjeta p {
+    color: #ededed;
     text-align: left;
     font-family: 'Merriweather', serif;
     font-size: 15px;
@@ -227,9 +221,11 @@ h3 {
     padding: 0 10px 10px; /* espacio uniforme alrededor */
 }
 
-/*info section*/
+/* ============================================================
+   MODALES & NAVEGACIÓN LATERAL
+============================================================ */
 #info-section {
-    display: none;           /* Oculto por defecto */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -263,18 +259,17 @@ h3 {
     line-height: 1;
 }
 
-/* Navegación lateral fija */
+/* Navegación lateral */
 .side-nav {
     position: fixed;
     top: 50%;
-    left: 25px;             /* SEPARA LOS DOTS DEL TEXTO */
+    left: 25px;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     gap: 12px;
-    z-index: 50;            /* YA NO TAPARÁ NADA */
+    z-index: 50;
 }
-
 
 .side-nav .dot {
     width: 14px;
@@ -290,7 +285,8 @@ h3 {
     background-color: #7f1f27;
     transform: scale(1.3);
 }
-/* ===== MODAL DE IMAGEN ===== */
+
+/* Modal de imagen */
 .modal-img {
     display: none;
     position: fixed;
@@ -322,34 +318,102 @@ h3 {
     transition: 0.3s;
 }
 
-.cerrar-modal:hover {
-    color: #ff7777;
-}
+.cerrar-modal:hover { color: #ff7777; }
 
 /* ============================================================
    5. FOOTER
 ============================================================ */
-footer {
-    background: #ffffff;
-    padding: 25px 0 35px;
+
+
+/* Móviles muy pequeños */
+@media (max-width: 480px) {
+    .tarjetas-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Ajuste cuando no hay side-nav */
+body.admisiones .seccion {
+    padding-left: 20px !important;
+}
+
+/* Centrar la única tarjeta */
+body.admisiones .tarjetas-grid {
+    max-width: 500px;
+    margin: 0 auto;
+}
+/* Ajuste cuando no hay side-nav (solo esta página) */
+body.admisiones .seccion {
+    padding-left: 20px !important;
+}
+
+/* Centrar tarjeta en páginas con una sola tarjeta */
+body.admisiones .tarjetas-grid {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Corrección responsive */
+@media (max-width: 480px) {
+    body.admisiones .tarjeta img {
+        width: 65%;
+    }
+}
+/* ======== REPARA TARJETAS QUE CORTAN TEXTO ======== */
+
+.tarjeta {
     width: 100%;
-    margin-top: 25px;
+    max-width: 100%;
+    overflow: visible !important;  /* evita que corte texto o enlaces */
 }
 
-.footer-contacto {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
+/* Las imágenes estaban ocupando demasiado espacio */
+.tarjeta img {
+    width: 100% !important; 
+    max-width: 280px;
+    height: auto;
 }
 
-.footer-contacto a {
-    color: #2c5f2d;
-    display: flex;
-    gap: 6px;
-    font-weight: 600;
+/* Evita que los textos se salgan o se tapen */
+.tarjeta p, 
+.tarjeta h3, 
+.tarjeta a {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    width: 100%;
+    text-align: left;
 }
 
-.footer-contacto a:hover { color: #7f1f27; }
+/* Asegura que los enlaces no se corten horizontalmente */
+/* Evitar que enlaces largos se salgan o se corten */
+.tarjeta a {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    display: inline-block;
+    max-width: 100%;
+}
 
-.icono { width: 20px; height: 20px; }
+
+/* Repara tarjetas con solo 1 elemento (como Admisiones) */
+.tarjetas-grid {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+.tarjeta p {
+    padding: 0 0 10px;  /* quita padding lateral */
+    width: 100%;
+}
+
+.tarjeta p a {
+
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    display: inline-block;  /* evita que el enlace se quede rígido */
+    max-width: 100%;
+}
+
+
+
+

@@ -1,0 +1,198 @@
+/* ===============================
+   NAVBAR
+=================================*/
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #0c0c0c;
+    border-bottom: 1px solid #ededed;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Logo + título */
+.logo-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.img_l {
+    width: 80px;
+    height: auto;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.titulo-nav {
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Ícono hamburguesa */
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Lista de navegación */
+ol.menu {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+/* Enlaces */
+li a {
+    font-family: 'Playfair Display', serif;
+    text-decoration: none;
+    color: #faf7f7;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+li a:hover,
+li a:focus {
+    border-bottom: 2px solid #7f1f27;
+}
+
+/* ===============================
+   MENÚ RESPONSIVE
+=================================*/
+@media (max-width: 768px) {
+    ol.menu {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #0c0c0c;
+        width: 200px;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        display: none;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    ol.menu.activo { display: flex; }
+
+    .menu-icon { display: block; }
+
+    .titulo-nav {
+        font-size: 14px;
+        max-width: 170px;
+        line-height: 1.2;
+    }
+}
+/* ===============================
+   FOOTER
+=================================*/
+footer {
+    background-color: #7f1f27;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    box-shadow: 0 -2px 5px rgba(255, 255, 255, 0.897);
+}
+
+.footer-contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* espacio entre enlaces */
+    flex-wrap: wrap; /* se adapta a móviles */
+}
+
+.footer-contacto a {
+    
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px; /* espacio entre icono y texto */
+    font-weight: 500;
+}
+
+.footer-contacto a:hover {
+    color: #7CB425; /* verde profesional al pasar el mouse */
+}
+
+.icono {
+    width: 20px;
+    height: 20px;
+    fill: currentColor; /* toma el color del link */
+}
+/* ==== INFO EN FILA (Coordinador - Clave - Dirección) ==== */
+
+.footer-info {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap; 
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    max-width: 260px;
+}
+
+.info-icon {
+    color: #7CB425;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.info-icon svg {
+    width: 22px;
+    height: 22px;
+    fill: #ffffff;
+}
+
+/* Ícono clickeable en Dirección */
+.enlace-mapa:hover svg {
+    fill: #fff;
+}
+
+/* Títulos y texto */
+.titulo {
+    color: #ffffff;
+    font-weight: bold;
+    margin: 0;
+    font-size: 15px;
+}
+
+.texto {
+    margin: 0;
+    color: #efefef;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.texto:hover {
+    color: #7CB425;
+    text-decoration: underline;
+}
+
+
+

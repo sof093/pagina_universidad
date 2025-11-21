@@ -1,0 +1,425 @@
+/* ===============================
+   RESET & FUENTE
+=================================*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===============================
+   BODY
+=================================*/
+body {
+    background: linear-gradient(180deg, #d4edda 0%, #81c784 100%); /* gradiente verde profesional */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 70px; /* espacio por menú fijo */
+}
+
+/* ===============================
+   NAVBAR
+=================================*/
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #0c0c0c;
+    border-bottom: 1px solid #ededed;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logo-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.img_l {
+    width: 80px;
+    height: auto;
+}
+
+.titulo-nav {
+    color: white;
+    font-size: 16px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+ol.menu {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+li a {
+    
+    text-decoration: none;
+    color: #faf7f7;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+li a:hover,
+li a:focus {
+    border-bottom: 2px solid #7f1f27;
+}
+
+/* ===============================
+   MENÚ RESPONSIVE
+=================================*/
+@media (max-width: 768px) {
+    ol.menu {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #0c0c0c;
+        width: 200px;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        display: none;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    ol.menu.activo { display: flex; }
+    .menu-icon { display: block; }
+    .titulo-nav {
+        font-size: 14px;
+        max-width: 170px;
+        line-height: 1.2;
+    }
+}
+
+/* ===============================
+   CONTENEDOR GENERAL
+=================================*/
+.contenedor-oferta, .oferta {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* TITULOS */
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: #2c5f2d; /* verde oscuro */
+    font-weight: 800;
+    margin-bottom: 35px;
+    text-align: center;
+    border-bottom: 3px solid #2c5f2d;
+    padding-bottom: 8px;
+}
+
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #32401D;
+    margin: 25px 0 10px;
+    text-align: left;
+    border-left: 5px solid #2c5f2d;
+    padding-left: 12px;
+}
+h4.asignaturas-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: #32401D; /* o el color que prefieras */
+    text-align: left;
+    padding-bottom: 6px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #7CB425; /* línea verde profesional */
+}
+
+p {
+    
+    font-family: "Lora", serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+/* ===============================
+   SEMESTRES / MATERIAS
+=================================*/
+/* Contenedor de semestres en grid */
+.semestres-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+/* Cada semestre */
+.semestre {
+    background: #fff; /* fondo blanco de recuadro */
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Título del semestre */
+.semestre h4 {
+    background: #7CB425; /* verde profesional */
+    color: #fff;
+    font-size: 16px;
+    margin: 0;
+    padding: 8px 10px;
+    text-align: left; /* alineación a la izquierda */
+    border-radius: 6px 6px 0 0;
+}
+
+/* Lista de materias */
+.semestre ul {
+    list-style: disc inside;
+    padding: 10px 15px;
+    margin: 0;
+}
+
+.semestre ul li {
+    font-size: 14px;
+    margin: 3px 0;
+    text-align: left; /* materias alineadas a la izquierda */
+}
+
+/* ===============================
+   BOTONES
+=================================*/
+.btn-mas, .btn-card {
+    display: inline-block;
+    padding: 10px 22px;
+    background: #2c5f2d;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.btn-mas:hover, .btn-card:hover {
+    background: #1d3f1b;
+}
+
+/* ===============================
+   RESET & FUENTE
+=================================*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===============================
+   BODY
+=================================*/
+body {
+    background: linear-gradient(180deg, #d4edda 0%, #81c784 100%);
+    font-family: 'Lora', serif;
+    text-align: justify;
+    padding-top: 70px;
+    color: #333;
+}
+
+/* ===============================
+   NAVBAR
+=================================*/
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #0c0c0c;
+    border-bottom: 1px solid #ededed;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logo-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.img_l {
+    width: 80px;
+    height: auto;
+}
+
+.titulo-nav {
+    color: white;
+    font-size: 16px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+ol.menu {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+li a {
+    
+    text-decoration: none;
+    color: #faf7f7;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+li a:hover,
+li a:focus {
+    border-bottom: 2px solid #7f1f27;
+}
+
+/* ===============================
+   MENÚ RESPONSIVE
+=================================*/
+@media (max-width: 768px) {
+    ol.menu {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #0c0c0c;
+        width: 200px;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        display: none;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    ol.menu.activo { display: flex; }
+    .menu-icon { display: block; }
+    .titulo-nav {
+        font-size: 14px;
+        max-width: 170px;
+        line-height: 1.2;
+    }
+}
+
+/* ===============================
+   CONTENEDOR GENERAL
+=================================*/
+.contenedor-oferta {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* ===============================
+   TITULOS
+=================================*/
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: #2c5f2d;
+    font-weight: 800;
+    margin-bottom: 35px;
+    text-align: center;
+    border-bottom: 3px solid #2c5f2d;
+    padding-bottom: 8px;
+}
+
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #32401D;
+    margin: 25px 0 10px;
+    border-left: 5px solid #2c5f2d;
+    padding-left: 12px;
+}
+
+/* ===============================
+   PÁRRAFOS
+=================================*/
+p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+.historia {
+    width: 45%;              /* imagen más pequeña */
+    max-width: 350px;        /* tamaño máximo */
+    height: auto;            /* mantiene proporción */
+    display: block;
+    margin: 20px auto;       /* centrada con espacio arriba y abajo */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 2px solid #7CB425; /* borde verde profesional */
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .historia {
+        width: 80%;
+        max-width: 250px;
+        margin: 15px auto;
+    }
+}
+
+
+
+
+/* ===============================
+   FOOTER
+=================================*/
+footer {
+    background-color: #ffffff;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+.link-reticula {
+    text-align: center; /* Centra el enlace dentro del div */
+    margin: 20px 0;    /* Espacio arriba y abajo */
+}
+
+.link-reticula a {
+    display: inline-block;           /* Permite padding y borde */
+    padding: 10px 20px;              /* Espacio interno */
+    background-color: #4CAF50;       /* Color de fondo */
+    color: white;                     /* Color del texto */
+    text-decoration: none;            /* Quita subrayado */
+    border-radius: 8px;               /* Bordes redondeados */
+    border: 2px solid #388E3C;       /* Borde visible */
+    font-weight: bold;                /* Texto más fuerte */
+    transition: background 0.3s;      /* Animación al pasar el mouse */
+    
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+
+}
+
+.link-reticula a:hover {
+    background-color: #388E3C;       /* Cambio de color al pasar el mouse */
+}

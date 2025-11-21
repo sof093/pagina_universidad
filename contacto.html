@@ -33,34 +33,30 @@
     
     
   
-<section class="seccion contacto-seccion" id="contacto">
-    <div class="contacto-contenedor">
-        <h2 class="contacto-titulo">Contáctame</h2>
+ <section class="seccion contacto-seccion" id="contacto">
+            <div class="contacto-contenedor">
+                <h2 class="contacto-titulo">Contáctame</h2>
 
-        <!-- AQUI AGREGAMOS LA CLASE contacto-formulario -->
-        <form class="contacto-formulario" action="https://api.web3forms.com/submit" method="POST">
+                <!-- FORMULARIO -->
+                <form class="contacto-formulario" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="36d0ecdc-e736-467d-aef6-3af8284612cb">
 
+                    <input type="text" name="nombre" placeholder="Ingresa tu nombre" required />
+                    <input type="email" name="correo" placeholder="Ingresa tu correo electrónico" required />
+                    <textarea name="mensaje" placeholder="Redacta tu mensaje" rows="4" required></textarea>
 
-            <input type="hidden" name="access_key" value="36d0ecdc-e736-467d-aef6-3af8284612cb">
+                    <input type="hidden" name="_captcha" value="false" />
+                    <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portafolio" />
+                    <input type="hidden" name="redirect" value="none">
 
-            <input type="text" name="nombre" placeholder="Nombre" required />
-            <input type="email" name="correo" placeholder="Correo electrónico" required />
-            <textarea name="mensaje" placeholder="Mensaje" rows="4" required></textarea>
+                    <button type="submit" class="btn-verde">Enviar mensaje</button>
+                </form>
 
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portafolio" />
-
-            <button type="submit" class="btn-verde">Enviar mensaje</button>
-            <input type="hidden" name="redirect" value="none">
-
-        </form>
-
-        <div id="mensaje-exito" class="alerta-exito">
-            ¡Tu mensaje ha sido enviado! 💚
-        </div>
-    </div>
-</section>
-
+                <div id="mensaje-exito" class="alerta-exito">
+                    ¡Tu mensaje ha sido enviado! 💚
+                </div>
+            </div>
+        </section>
 
 
 
@@ -136,7 +132,7 @@
             </svg>
         </div>
         <div>
-            <p class="titulo">Clave de Institución</p>
+            <p class="titulo">Clave de institución</p>
             <p class="texto">15ESU0016F</p>
         </div>
     </div>
@@ -175,25 +171,53 @@
 
 <script src="js/responsivo.js"></script>
 <script>
-document.querySelector(".contacto-formulario").addEventListener("submit", async function(e) {
-    e.preventDefault(); // Evitar recargar página
+        // Mostrar mensaje de éxito con Web3Forms
+        document.querySelector(".contacto-formulario").addEventListener("submit", async function (e) {
+            e.preventDefault();
 
-    const form = e.target;
-    const formData = new FormData(form);
+            const form = e.target;
+            const formData = new FormData(form);
 
-    const respuesta = await fetch(form.action, {
-        method: "POST",
-        body: formData,
-    });
+            // Validación de campos vacíos mostrando en el placeholder
+            let valid = true;
+            form.querySelectorAll("input[required], textarea[required]").forEach(field => {
+                if (!field.value.trim()) {
+                    valid = false;
+                    field.placeholder = "Rellene este campo";
+                    field.classList.add("error-input");
+                } else {
+                    // restaurar placeholder original si tiene contenido
+                    if (field.name === "nombre") field.placeholder = "Nombre";
+                    if (field.name === "correo") field.placeholder = "Correo electrónico";
+                    if (field.name === "mensaje") field.placeholder = "Mensaje";
+                    field.classList.remove("error-input");
+                }
+            });
 
-    if (respuesta.ok) {
-        document.getElementById("mensaje-exito").style.opacity = "1"; 
-        form.reset();
-    } else {
-        alert("Ocurrió un error. Intenta otra vez.");
-    }
-});
-</script>
+            if (!valid) return;
+
+            // Enviar datos al API
+            const respuesta = await fetch(form.action, {
+                method: "POST",
+                body: formData
+            });
+
+            if (respuesta.ok) {
+                document.getElementById("mensaje-exito").style.opacity = "1";
+                form.reset();
+            } else {
+                alert("Ocurrió un error. Intenta otra vez.");
+            }
+        });
+
+        // Quitar clase de error al escribir
+        document.querySelectorAll(".contacto-formulario input, .contacto-formulario textarea")
+            .forEach(field => {
+                field.addEventListener("input", () => {
+                    field.classList.remove("error-input");
+                });
+            });
+    </script>
 
 </body>
 </html>

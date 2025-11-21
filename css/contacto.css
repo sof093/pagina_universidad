@@ -14,7 +14,6 @@ body {
 /* ===============================
    CONTENEDOR DE LA SECCIÓN
 =================================*/
-
 .contacto-seccion {
     background: linear-gradient(180deg, #d8ecd8 0%, #c5e3c6 100%);
     padding: 90px 20px;
@@ -23,7 +22,6 @@ body {
 /* ===============================
    CUADRO DEL FORMULARIO
 =================================*/
-
 .contacto-contenedor {
     background: #ffffff;
     padding: 45px 40px;
@@ -37,7 +35,6 @@ body {
 /* ===============================
    TÍTULO
 =================================*/
-
 .contacto-titulo {
     font-family: "Playfair Display", serif;
     font-size: 2.4rem;
@@ -50,7 +47,6 @@ body {
 /* ===============================
    FORMULARIO
 =================================*/
-
 .contacto-formulario {
     display: flex;
     flex-direction: column;
@@ -65,7 +61,7 @@ body {
     border: 2px solid #c7d8c7;
     border-radius: 14px;
     background: #f8fff8;
-    transition: .3s ease;
+    transition: 0.3s ease;
 }
 
 .contacto-formulario input:focus,
@@ -76,9 +72,24 @@ body {
 }
 
 /* ===============================
+   MENSAJES DE ERROR
+=================================*/
+.error-msg {
+    color: red;
+    font-size: 0.9rem;
+    display: none;
+    margin-top: 2px;
+}
+
+/* Mostrar mensaje solo si el campo es inválido */
+.contacto-formulario input:invalid + .error-msg,
+.contacto-formulario textarea:invalid + .error-msg {
+    display: block;
+}
+
+/* ===============================
    BOTÓN
 =================================*/
-
 .btn-verde {
     padding: 14px;
     background: #1f4e1f;
@@ -99,7 +110,6 @@ body {
 /* ===============================
    MENSAJE DE ÉXITO
 =================================*/
-
 .alerta-exito {
     margin-top: 22px;
     background: #1f4e1f;
@@ -115,8 +125,12 @@ body {
 /* ===============================
    ANIMACIÓN
 =================================*/
-
 @keyframes aparecer {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
 }
+.error-input {
+    border-color: #ff4d4d !important;
+    box-shadow: 0 0 6px rgba(255, 0, 0, 0.5);
+}
+

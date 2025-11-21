@@ -32,9 +32,16 @@
             </ol>
         </nav>
     </header>
+    <!-- Navegación lateral por bloques -->
+<div class="side-nav" id="side-nav">
+  <span class="dot" data-target="0"></span>
+  <span class="dot" data-target="1"></span>
+  <span class="dot" data-target="2"></span>
+</div>
+
 
 <section class="oferta">
-    <h2>Oferta Educativa</h2>
+    <h2 class="seccion">Oferta educativa</h2>
 
     <!-- ===================== BLOQUE COMPLETO 1 ===================== -->
     <div class="bloque">
@@ -181,7 +188,7 @@
 
     <!-- ===================== BLOQUE COMPLETO 2 ===================== -->
     <div class="bloque">
-        <h3>Ingeniería en Sistemas Computacionales</h3>
+        <h3 class="seccion">Ingeniería en Sistemas Computacionales</h3>
         
         <p>Profesionales capaces de diseñar, desarrollar y administrar sistemas computacionales eficientes.</p>
 
@@ -323,7 +330,7 @@
 
     <!-- ===================== BLOQUE COMPLETO 3 ===================== -->
     <div class="bloque">
-        <h3>Contaduría</h3>
+        <h3 class="seccion">Contaduría</h3>
         
         <p>Formación en análisis e interpretación financiera, responsabilidad ética y toma de decisiones estratégicas.</p>
 
@@ -532,7 +539,7 @@
             </svg>
         </div>
         <div>
-            <p class="titulo">Clave de Institución</p>
+            <p class="titulo">Clave de institución</p>
             <p class="texto">15ESU0016F</p>
         </div>
     </div>
@@ -567,10 +574,36 @@
 
 
 
-<script src="js/responsivo.js"></script>
-</body>
-</html>
 
 <script src="js/responsivo.js"></script>
+<script>
+const dots = document.querySelectorAll('.side-nav .dot');
+
+// Seleccionamos los elementos que queremos mostrar al hacer click
+const targets = [
+  document.querySelector('.oferta h2'), // Primer dot → Oferta educativa
+  document.querySelector('.bloque:nth-of-type(2) h3'), // Segundo dot → Ingeniería en Sistemas Computacionales
+  document.querySelector('.bloque:nth-of-type(3) h3')  // Tercer dot → Contaduría
+];
+
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    targets[index].scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+// Opcional: actualizar dot activo al hacer scroll
+window.addEventListener('scroll', () => {
+  let current = 0;
+  targets.forEach((target, index) => {
+    const top = target.getBoundingClientRect().top;
+    if (top <= window.innerHeight / 2) current = index;
+  });
+  dots.forEach(dot => dot.classList.remove('active'));
+  dots[current].classList.add('active');
+});
+
+</script>
+
 </body>
 </html>

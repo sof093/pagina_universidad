@@ -1,6 +1,4 @@
-/* ===============================
-   RESET & FUENTE
-=================================*/
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -13,24 +11,13 @@
 }
 
 
-/* ===============================
-   BODY
-=================================*/
 body {
     background: black;
     font-family: Arial, sans-serif;
     text-align: center;
     padding-top: 70px;
-    /* Dejar espacio por menú fijo */
 }
 
-
-
-/* ===============================
-   IMÁGENES Y CONTENEDOR PRINCIPAL
-=================================*/
-/* Hero image full width */
-/* === HERO === */
 .contenedor {
     position: relative;
 }
@@ -40,8 +27,6 @@ body {
     height: 430px;
     object-fit: cover;
 }
-
-
 
 
 .contenedor .texto-valores h1 {
@@ -54,9 +39,6 @@ body {
 }
 
 
-/* ===============================
-   TIPOGRAFÍA
-=================================*/
 h1 {
 
 
@@ -72,12 +54,6 @@ p {
     text-align: left;
 }
 
-
-
-
-
-
-/* Título de la tarjeta */
 .tarjeta label {
     font-size: 22px;
     font-weight: bold;
@@ -86,9 +62,6 @@ p {
     margin-bottom: 10px;
 }
 
-
-
-/* Contenedor de las cards arriba de la imagen */
 .cards {
     margin-top: -100px;
     display: flex;
@@ -97,9 +70,6 @@ p {
     position: relative;
     z-index: 20;
 }
-
-
-
 
 .card {
     background: #ffffff;
@@ -113,17 +83,10 @@ p {
     text-align: center;
 }
 
-/* Hover */
 .card:hover {
     transform: translateY(-8px);
 }
 
-/* ===============================
-   Ofetara educativa 
-=================================*/
-/* =====================================
-   ESTILO GENERAL PARA H3
-=====================================*/
 h3 {
 
     font-size: 28px;
@@ -137,9 +100,6 @@ h3 {
     padding-left: 12px;
 }
 
-/* =====================================
-   ESTILO GENERAL PARA PÁRRAFOS
-=====================================*/
 p {
     font-size: 17px;
     line-height: 1.7;
@@ -149,7 +109,6 @@ p {
     text-align: justify;
 }
 
-/* Para los párrafos dentro de las cards */
 .card p {
     font-family: 'Merriweather', serif;
     font-size: 15px;
@@ -159,7 +118,6 @@ p {
     font-weight: 500;
 }
 
-/* Para los H3 dentro de las cards */
 .card h3 {
     font-family: 'Lora', serif;
 
@@ -169,22 +127,9 @@ p {
     text-align: center;
 }
 
-
-
-
-
-
-
-
-
-/* ===============================
-   RESPONSIVE CARDS
-=================================*/
-
 @media (max-width: 768px) {
     .cards {
         margin-top: -80px;
-        /* menor superposición en pantallas pequeñas */
         gap: 15px;
     }
 
@@ -199,17 +144,11 @@ p {
     }
 }
 
-/* ===============================
-   SECCIÓN texto-valores PRINCIPAL
-=================================*/
 .texto-valores {
     max-width: 900px;
-    /* ancho máximo para no estirar demasiado */
     margin: 50px auto;
-    /* centra la sección y espacio superior/inferior */
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.95);
-    /* fondo claro semi-transparente */
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
     text-align: left;
@@ -218,7 +157,6 @@ p {
     color: #333;
 }
 
-/* TITULO PRINCIPAL */
 .texto-valores h1 {
     font-family: 'Playfair Display', serif;
     font-size: 3em;
@@ -227,7 +165,6 @@ p {
     text-align: center;
 }
 
-/* Subtítulos H3 */
 .texto-valores h3.datos {
     font-family: 'Lora', serif;
     font-size: 1.8em;
@@ -238,7 +175,6 @@ p {
     margin-bottom: 10px;
 }
 
-/* Subtítulos H2 para valores */
 .texto-valores h2.sub {
     font-family: 'Lora', serif;
     font-size: 1.5em;
@@ -246,8 +182,6 @@ p {
     margin-top: 20px;
     margin-bottom: 8px;
 }
-
-/* Párrafos generales dentro de texto-valores */
 .texto-valores p {
     font-size: 1em;
     color: #444;
@@ -255,13 +189,11 @@ p {
     text-align: justify;
 }
 
-/* Citas o frases destacadas */
 .texto-valores strong {
     color: #7f1f27;
     font-size: 1.1em;
 }
 
-/* Para mejorar separación de secciones */
 .texto-valores hr {
     border: none;
     height: 2px;
@@ -271,25 +203,17 @@ p {
 
 .btn-mas {
     text-decoration: none;
-    /* quita la línea */
     color: #7f1f27;
-    /* mantén tu color deseado */
     font-weight: bold;
-    /* opcional: resalta el texto */
     display: inline-block;
-    /* opcional: para controlar padding/margen */
     transition: 0.3s ease;
-    /* opcional: para hover suave */
 }
 
 .btn-mas:hover {
     color: #4c1a1f;
-    /* cambio de color al pasar el mouse */
     text-decoration: none;
-    /* aseguramos que no aparezca subrayado al hover */
 }
 
-/* ====== RESPONSIVE REAL PARA CARDS ====== */
 @media (max-width: 992px) {
 
     .cards {
@@ -305,7 +229,6 @@ p {
     }
 }
 
-/* Pantallas pequeñas (celulares) */
 @media (max-width: 600px) {
 
     .cards {
@@ -322,6 +245,5 @@ p {
 
     .contenedor img {
         height: 250px;
-        /* evita recorte feo */
     }
 }

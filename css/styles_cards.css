@@ -1,27 +1,17 @@
-/* ===============================
-   RESET & FUENTE
-=================================*/
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* ===============================
-   BODY
-=================================*/
 body {
     background: linear-gradient(180deg, #d4edda 0%, #81c784 100%);
-    /* gradiente verde profesional */
     font-family: Arial, sans-serif;
     text-align: center;
     padding-top: 70px;
-    /* espacio por menú fijo */
 }
 
-/* ===============================
-   NAVBAR
-=================================*/
 nav {
     position: fixed;
     top: 0;
@@ -80,9 +70,6 @@ li a:focus {
     border-bottom: 2px solid #7f1f27;
 }
 
-/* ===============================
-   MENÚ RESPONSIVE
-=================================*/
 @media (max-width: 768px) {
     ol.menu {
         position: absolute;
@@ -112,9 +99,6 @@ li a:focus {
     }
 }
 
-/* ===============================
-   CONTENEDOR GENERAL
-=================================*/
 .contenedor-oferta,
 .oferta {
     max-width: 1200px;
@@ -122,12 +106,10 @@ li a:focus {
     padding: 0 20px;
 }
 
-/* TITULOS */
 h2 {
     font-family: 'Playfair Display', serif;
     font-size: 36px;
     color: #2c5f2d;
-    /* verde oscuro */
     font-weight: 800;
     margin-bottom: 35px;
     text-align: center;
@@ -156,12 +138,10 @@ h4.asignaturas-titulo {
     font-family: 'Playfair Display', serif;
     font-size: 20px;
     color: #32401D;
-    /* o el color que prefieras */
     text-align: left;
     padding-bottom: 6px;
     margin-bottom: 15px;
     border-bottom: 2px solid #7CB425;
-    /* línea verde profesional */
 }
 
 p {
@@ -174,20 +154,14 @@ p {
     text-align: justify;
 }
 
-/* ===============================
-   SEMESTRES / MATERIAS
-=================================*/
-/* Contenedor de semestres en grid */
 .semestres-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
 }
 
-/* Cada semestre */
 .semestre {
     background: #fff;
-    /* fondo blanco de recuadro */
     border-radius: 8px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -195,20 +169,16 @@ p {
     flex-direction: column;
 }
 
-/* Título del semestre */
 .semestre h4 {
     background: #7CB425;
-    /* verde profesional */
     color: #fff;
     font-size: 16px;
     margin: 0;
     padding: 8px 10px;
     text-align: left;
-    /* alineación a la izquierda */
     border-radius: 6px 6px 0 0;
 }
 
-/* Lista de materias */
 .semestre ul {
     list-style: disc inside;
     padding: 10px 15px;
@@ -219,12 +189,8 @@ p {
     font-size: 14px;
     margin: 3px 0;
     text-align: left;
-    /* materias alineadas a la izquierda */
 }
 
-/* ===============================
-   BOTONES
-=================================*/
 .btn-mas,
 .btn-card {
     display: inline-block;
@@ -241,18 +207,12 @@ p {
     background: #1d3f1b;
 }
 
-/* ===============================
-   RESET & FUENTE
-=================================*/
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* ===============================
-   BODY
-=================================*/
 body {
     background: linear-gradient(180deg, #d4edda 0%, #81c784 100%);
     font-family: 'Lora', serif;
@@ -261,9 +221,6 @@ body {
     color: #333;
 }
 
-/* ===============================
-   NAVBAR
-=================================*/
 nav {
     position: fixed;
     top: 0;
@@ -322,9 +279,6 @@ li a:focus {
     border-bottom: 2px solid #7f1f27;
 }
 
-/* ===============================
-   MENÚ RESPONSIVE
-=================================*/
 @media (max-width: 768px) {
     ol.menu {
         position: absolute;
@@ -354,18 +308,12 @@ li a:focus {
     }
 }
 
-/* ===============================
-   CONTENEDOR GENERAL
-=================================*/
 .contenedor-oferta {
     max-width: 1000px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
-/* ===============================
-   TITULOS
-=================================*/
 h2 {
     font-family: 'Playfair Display', serif;
     font-size: 36px;
@@ -387,9 +335,6 @@ h3 {
     padding-left: 12px;
 }
 
-/* ===============================
-   PÁRRAFOS
-=================================*/
 p {
     font-size: 17px;
     line-height: 1.7;
@@ -398,21 +343,16 @@ p {
 
 .historia {
     width: 45%;
-    /* imagen más pequeña */
     max-width: 350px;
-    /* tamaño máximo */
     height: auto;
-    /* mantiene proporción */
     display: block;
     margin: 20px auto;
-    /* centrada con espacio arriba y abajo */
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border: 2px solid #7CB425;
-    /* borde verde profesional */
 }
 
-/* Responsive para móviles */
+/* Responsivo para móviles */
 @media (max-width: 768px) {
     .historia {
         width: 80%;
@@ -422,11 +362,6 @@ p {
 }
 
 
-
-
-/* ===============================
-   FOOTER
-=================================*/
 footer {
     background-color: #ffffff;
     color: #fff;
@@ -440,30 +375,19 @@ footer {
 
 .link-reticula {
     text-align: center;
-    /* Centra el enlace dentro del div */
     margin: 20px 0;
-    /* Espacio arriba y abajo */
 }
 
 .link-reticula a {
     display: inline-block;
-    /* Permite padding y borde */
     padding: 10px 20px;
-    /* Espacio interno */
     background-color: #4CAF50;
-    /* Color de fondo */
     color: white;
-    /* Color del texto */
     text-decoration: none;
-    /* Quita subrayado */
     border-radius: 8px;
-    /* Bordes redondeados */
     border: 2px solid #388E3C;
-    /* Borde visible */
     font-weight: bold;
-    /* Texto más fuerte */
     transition: background 0.3s;
-    /* Animación al pasar el mouse */
 
     text-decoration: underline;
     text-underline-offset: 4px;
@@ -473,21 +397,17 @@ footer {
 
 .link-reticula a:hover {
     background-color: #388E3C;
-    /* Cambio de color al pasar el mouse */
 }
 
-/* Navegación lateral fija */
 .side-nav {
     position: fixed;
     top: 50%;
     left: 25px;
-    /* SEPARA LOS DOTS DEL TEXTO */
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     gap: 12px;
     z-index: 50;
-    /* YA NO TAPARÁ NADA */
 }
 
 
@@ -508,6 +428,4 @@ footer {
 
 .seccion {
     scroll-margin-top: 80px;
-    /* altura del navbar + 10px de margen */
-
 }

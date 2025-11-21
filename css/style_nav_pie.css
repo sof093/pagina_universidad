@@ -1,6 +1,4 @@
-/* ===============================
-   NAVBAR
-=================================*/
+
 nav {
     position: fixed;
     top: 0;
@@ -15,7 +13,6 @@ nav {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-/* Logo + título */
 .logo-contenedor {
     display: flex;
     align-items: center;
@@ -36,7 +33,6 @@ nav {
     margin: 0;
 }
 
-/* Ícono hamburguesa */
 .menu-icon {
     display: none;
     font-size: 28px;
@@ -44,14 +40,12 @@ nav {
     cursor: pointer;
 }
 
-/* Lista de navegación */
 ol.menu {
     list-style: none;
     display: flex;
     gap: 40px;
 }
 
-/* Enlaces */
 li a {
     font-family: 'Playfair Display', serif;
     text-decoration: none;
@@ -67,9 +61,7 @@ li a:focus {
     border-bottom: 2px solid #7f1f27;
 }
 
-/* ===============================
-   MENÚ RESPONSIVE
-=================================*/
+
 @media (max-width: 768px) {
     ol.menu {
         position: absolute;
@@ -99,10 +91,6 @@ li a:focus {
     }
 }
 
-/* ===============================
-   FOOTER
-=================================*/
-
 footer {
     background-color: #7f1f27;
     color: #fff;
@@ -119,9 +107,7 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    /* espacio entre enlaces */
     flex-wrap: wrap;
-    /* se adapta a móviles */
 }
 
 .footer-contacto a {
@@ -131,23 +117,18 @@ footer {
     display: flex;
     align-items: center;
     gap: 6px;
-    /* espacio entre icono y texto */
     font-weight: 500;
 }
 
 .footer-contacto a:hover {
     color: #7CB425;
-    /* verde profesional al pasar el mouse */
 }
 
 .icono {
     width: 20px;
     height: 20px;
     fill: currentColor;
-    /* toma el color del link */
 }
-
-/* ==== INFO EN FILA (Coordinador - Clave - Dirección) ==== */
 
 .footer-info {
     margin-top: 30px;
@@ -181,12 +162,10 @@ footer {
     fill: #ffffff;
 }
 
-/* Ícono clickeable en Dirección */
 .enlace-mapa:hover svg {
     fill: #fff;
 }
 
-/* Títulos y texto */
 .titulo {
     color: #ffffff;
     font-weight: bold;

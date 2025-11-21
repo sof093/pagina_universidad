@@ -61,14 +61,7 @@
             </div>
         </section>
 
-
-
-
-
-
     </main>
-    <!--  Pie de página  -->
-    <!--  Pie de página  -->
     <footer role="contentinfo">
 
         <div class="footer-contacto">
@@ -169,20 +162,14 @@
         </div>
         <h6>© 2025 Todos los derechos reservados.</h6>
 
-
-
-
-
         <script src="js/responsivo.js"></script>
         <script>
-            // Mostrar mensaje de éxito con Web3Forms
             document.querySelector(".contacto-formulario").addEventListener("submit", async function (e) {
                 e.preventDefault();
 
                 const form = e.target;
                 const formData = new FormData(form);
 
-                // Validación de campos vacíos mostrando en el placeholder
                 let valid = true;
                 form.querySelectorAll("input[required], textarea[required]").forEach(field => {
                     if (!field.value.trim()) {
@@ -190,7 +177,6 @@
                         field.placeholder = "Rellene este campo";
                         field.classList.add("error-input");
                     } else {
-                        // restaurar placeholder original si tiene contenido
                         if (field.name === "nombre") field.placeholder = "Nombre";
                         if (field.name === "correo") field.placeholder = "Correo electrónico";
                         if (field.name === "mensaje") field.placeholder = "Mensaje";
@@ -200,7 +186,6 @@
 
                 if (!valid) return;
 
-                // Enviar datos al API
                 const respuesta = await fetch(form.action, {
                     method: "POST",
                     body: formData
@@ -214,7 +199,6 @@
                 }
             });
 
-            // Quitar clase de error al escribir
             document.querySelectorAll(".contacto-formulario input, .contacto-formulario textarea")
                 .forEach(field => {
                     field.addEventListener("input", () => {

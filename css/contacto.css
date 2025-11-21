@@ -1,6 +1,4 @@
-/* ===============================
-   RESET & FUENTE
-=================================*/
+
 * {
     margin: 0;
     padding: 0;
@@ -11,17 +9,11 @@ body {
     font-family: "Lora", serif;
 }
 
-/* ===============================
-   CONTENEDOR DE LA SECCIÓN
-=================================*/
 .contacto-seccion {
     background: linear-gradient(180deg, #d8ecd8 0%, #c5e3c6 100%);
     padding: 90px 20px;
 }
 
-/* ===============================
-   CUADRO DEL FORMULARIO
-=================================*/
 .contacto-contenedor {
     background: #ffffff;
     padding: 45px 40px;
@@ -32,9 +24,6 @@ body {
     animation: aparecer 0.7s ease;
 }
 
-/* ===============================
-   TÍTULO
-=================================*/
 .contacto-titulo {
     font-family: "Playfair Display", serif;
     font-size: 2.4rem;
@@ -44,9 +33,6 @@ body {
     margin-bottom: 30px;
 }
 
-/* ===============================
-   FORMULARIO
-=================================*/
 .contacto-formulario {
     display: flex;
     flex-direction: column;
@@ -71,9 +57,6 @@ body {
     outline: none;
 }
 
-/* ===============================
-   MENSAJES DE ERROR
-=================================*/
 .error-msg {
     color: red;
     font-size: 0.9rem;
@@ -81,15 +64,11 @@ body {
     margin-top: 2px;
 }
 
-/* Mostrar mensaje solo si el campo es inválido */
 .contacto-formulario input:invalid+.error-msg,
 .contacto-formulario textarea:invalid+.error-msg {
     display: block;
 }
 
-/* ===============================
-   BOTÓN
-=================================*/
 .btn-verde {
     padding: 14px;
     background: #1f4e1f;
@@ -107,9 +86,6 @@ body {
     transform: translateY(-3px);
 }
 
-/* ===============================
-   MENSAJE DE ÉXITO
-=================================*/
 .alerta-exito {
     margin-top: 22px;
     background: #1f4e1f;
@@ -122,9 +98,7 @@ body {
     transition: opacity 0.4s ease;
 }
 
-/* ===============================
-   ANIMACIÓN
-=================================*/
+
 @keyframes aparecer {
     from {
         opacity: 0;
